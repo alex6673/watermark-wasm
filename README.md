@@ -31,6 +31,11 @@ npm run serve
 ## 3) 發佈到 GitHub Pages
 
 專案已含 workflow：`.github/workflows/deploy-pages.yml`  
-推送到 `main` 後會自動部署 `web/` 到 Pages。
+推送到 `main` 後會自動把 `web/` 發佈到 `gh-pages` 分支。
+
+請在 repo 設定：
+- **Settings → Pages → Build and deployment**
+- Source 選 **Deploy from a branch**
+- Branch 選 **`gh-pages` / `(root)`**
 
 > 若你的預設分支不是 `main`，請把 workflow 內的分支名稱改成你的分支。
