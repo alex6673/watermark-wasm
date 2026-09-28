@@ -2,6 +2,9 @@
 
 可直接部署到 **GitHub Pages**，在瀏覽器中離線處理 PNG（不需後端）。
 
+GitHub Pages 網址：  
+**https://alex6673.github.io/watermark-wasm/**
+
 ## 1) 安裝與建置
 
 ```bash
@@ -31,14 +34,3 @@ npm run serve
 推送到 `main` 後會自動部署 `web/` 到 Pages。
 
 > 若你的預設分支不是 `main`，請把 workflow 內的分支名稱改成你的分支。
-
----
-
-## 舊版 CLI（Python）
-
-仍保留 `watermark.py`，可用於命令列批次處理：
-
-```bash
-python3 -m pip install pillow
-python3 watermark.py input.png output.png "中文浮水印" --position center --size 108
-```
