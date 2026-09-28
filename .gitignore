@@ -1,0 +1,3 @@
+node_modules/
+web/watermark.wasm
+web/watermark.wat

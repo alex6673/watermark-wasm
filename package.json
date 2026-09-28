@@ -1,0 +1,13 @@
+{
+  "name": "png-watermark-wasm",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:wasm": "asc wasm/watermark.ts -O3 --noAssert --target release --outFile web/watermark.wasm --textFile web/watermark.wat",
+    "build": "npm run build:wasm",
+    "serve": "npx serve web"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.28.8"
+  }
+}
