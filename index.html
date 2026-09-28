@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PNG 中文浮水印（WASM）</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>PNG 中文浮水印（WASM）</h1>
+      <p class="hint">純前端運作，圖片不會上傳到伺服器。</p>
+
+      <section class="panel">
+        <label>PNG 檔案
+          <input id="fileInput" type="file" accept="image/png" />
+        </label>
+
+        <label>浮水印文字
+          <input id="textInput" type="text" value="僅供內部使用" />
+        </label>
+
+        <div class="grid">
+          <label>位置
+            <select id="positionInput">
+              <option value="0">右下</option>
+              <option value="1">左下</option>
+              <option value="2">右上</option>
+              <option value="3">左上</option>
+              <option value="4">置中</option>
+            </select>
+          </label>
+
+          <label>字體大小
+            <input id="sizeInput" type="number" min="8" max="400" value="36" />
+          </label>
+
+          <label>透明度 (0~255)
+            <input id="opacityInput" type="number" min="0" max="255" value="96" />
+          </label>
+
+          <label>邊距
+            <input id="marginInput" type="number" min="0" max="500" value="24" />
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="renderBtn" type="button">產生浮水印</button>
+          <button id="downloadBtn" type="button" disabled>下載 PNG</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <canvas id="previewCanvas"></canvas>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
